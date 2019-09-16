@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import NavigationItems from './NavigationItems';
-import NavigationItem from './NavigationItem/NavigationItem';
+import NavigationItem from '../NavigationItem/NavigationItem';
 
 configure({ adapter: new Adapter() })
 
