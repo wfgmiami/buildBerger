@@ -12,21 +12,21 @@ class App extends Component {
 
 
   componentDidMount() {
-    console.log('[app.js] componentDidMount')
+    // console.log('[app.js] componentDidMount')
   }
 
   shouldComponentUpdate(nextPropsNextState) {
-    console.log('[app.js] shouldComponentUpdate')
+    // console.log('[app.js] shouldComponentUpdate')
     return true
   }
 
   componentDidUpdate() {
-    console.log('[app.js] componentDidUpdate')
+    // console.log('[app.js] componentDidUpdate')
   }
 
 
   render() {
-    console.log('[App.js] render')
+    // console.log('[App.js] render')
 
     return (
       <Layout>
