@@ -1,19 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import Layout from './components/Layout/Layout';
-import BurgerBuider from './containers/BurgerBuilder/BurgerBuilder';
+import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
+import Checkout from './containers/Checkout/Checkout';
+import {Route, Switch} from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-    }
   }
 
-
-  componentDidMount() {
-    // console.log('[app.js] componentDidMount')
-  }
 
   shouldComponentUpdate(nextPropsNextState) {
     // console.log('[app.js] shouldComponentUpdate')
@@ -30,7 +25,10 @@ class App extends Component {
 
     return (
       <Layout>
-        <BurgerBuider/>
+          <Switch>
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/" exact component={BurgerBuilder} />
+          </Switch>
       </Layout>
     );
 
