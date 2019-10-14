@@ -2,24 +2,28 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import classes from './NavigationItem.module.css';
 
+
 const NavigationItem = ( props ) => {
+  console.log('[NavigationItem] props: ', props)
+
+
   return (
     <li className={classes.NavigationItem}>
-      <a
+      {/* <a
         href={props.link}
         className={props.active ? classes.active : null}
       >
         {props.children}
-      </a>
+      </a> */}
+
+      <NavLink
+        to={props.link}
+        exact={props.exact}
+        activeClassName={classes.active}
+      >
+        {props.children}
+      </NavLink>
     </li>
-    // <li>
-    //   <NavLink
-    //     exact
-    //     to={props.link}
-    //   >
-    //     {props.childrent}
-    //   </NavLink>
-    // </li>
   )
 }
 
